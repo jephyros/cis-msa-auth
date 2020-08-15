@@ -43,10 +43,11 @@ public class UserInformationServerce implements UserDetailsService {
         switch(user.getUserType()) {
             case 0 :
                 // admin
-                authoritylist.add(new SimpleGrantedAuthority("ADMIN"));
+                authoritylist.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+                break;
             case 1 :
                 // user
-                authoritylist.add(new SimpleGrantedAuthority("USER"));
+                authoritylist.add(new SimpleGrantedAuthority("ROLE_USER"));
                 break;
         }
 
